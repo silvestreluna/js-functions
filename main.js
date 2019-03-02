@@ -59,3 +59,13 @@ const printToDom = (divId, textToPrint) => {
 printToDom('dog-breed', dogBreed('lab'));
 printToDom('nuggetizer', nuggetizer('chicken'));
 printToDom('nuggetizer', 'Mmmmmmm');
+
+let bandNumber = 1;
+const addBand = (bandName) => {
+    const bandText = `<h5>${bandNumber}. ${bandName}</h5>`;
+    bandNumber ++;
+    printToDom('band-list', bandText);
+};
+
+addBand('Metalica'); 
+addBand('slayer'); 

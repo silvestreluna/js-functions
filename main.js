@@ -38,8 +38,34 @@ console.log(nuggetizer('pig'));
 // output = favorite dog breed is border collie
 
 const dogBreed = (dog) => {
-    return `My favorite dog breed is a ${dog}`;
+    return `My favorite dog breed is ${dog}`;
 };
 
 console.log(dogBreed('Border Collie'));
 console.log(dogBreed('Lab'));
+
+// const dogBreedDiv =  document.getElementById('dog-breed');
+// dogBreedDiv.innerHTML = dogBreed('lab');
+
+// const nugget = document.getElementById('nuggetizer');
+// nugget.innerHTML = nuggetizer('chicken');
+// nugget.innerHTML += nuggetizer('chicken');
+
+const printToDom = (divId, textToPrint) => {
+    const selectedDiv = document.getElementById(divId);
+    selectedDiv.innerHTML += textToPrint;
+};
+
+printToDom('dog-breed', dogBreed('lab'));
+printToDom('nuggetizer', nuggetizer('chicken'));
+printToDom('nuggetizer', 'Mmmmmmm');
+
+let bandNumber = 1;
+const addBand = (bandName) => {
+    const bandText = `<h5>${bandNumber}. ${bandName}</h5>`;
+    bandNumber ++;
+    printToDom('band-list', bandText);
+};
+
+addBand('Metalica'); 
+addBand('slayer'); 

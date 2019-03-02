@@ -32,3 +32,14 @@ const nuggetizer = (animal) => {
 };
 
 console.log(nuggetizer('pig'));
+
+// dogBreed funtion 
+// 1. input will be a string "border collie"
+// output = favorite dog breed is border collie
+
+const dogBreed = (dog) => {
+    return `My favorite dog breed is a ${dog}`;
+};
+
+console.log(dogBreed('Border Collie'));
+console.log(dogBreed('Lab'));
